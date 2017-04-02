@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>IS434: DHL Dashboard</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="css/navbar-fixed-top.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Chelsea+Market|Nixie+One" rel="stylesheet">
+
+        <!-- Plotly.js -->
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    </head>
+
+    <body>
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container" id="font-header">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand"><img src="img/dhl.jpg" width="120px"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="index.html">MARKET OVERVIEW</a></li>
+                <li><a href="brand.html">BRAND CO-MENTIONS</a></li>
+                <li class="active"><a href="buzz.html">SENTIMENTS</a></li>
+                <li><a href="wordcloud.html">WORD CLOUD</a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div>
+        </nav>
+
+        <!-- Begin page content -->
+        <div class="container">
+          <div class="page-header">
+              <h1>Brand Sentiments Over Time</h1>
+          </div>
+          <!-- Main component for a primary marketing message or call to action -->
+          <div class="jumbotron">
+              <h3>Sentiment Analysis By Brand & Source</h3>
+              <p style="font-size:16px">To navigate:<br> <b>double click</b> on legend to select a brand’s sentiment score from all sources<br>
+                  <b>click once</b> to deselect or select another brand
+              </p>
+              <div id="divSentiment" style="margin-left: auto, margin-right: auto">
+                <!-- Plotly chart will be drawn inside this DIV -->
+              </div>
+              <p style="font-size:16px">This graph is best viewed with comparison of 2 companies</p>
+          </div>
+        </div> <!-- /container -->
+
+    <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/sentiment.js"></script>
+    </body>
+
+</html>

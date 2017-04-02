@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>IS434: DHL Dashboard</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/tab.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <style>
+            /* Image Gallary - Responsive*/
+            div.gallery {
+                border: 1px solid #ccc;
+                background-color: white;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                min-width: 220px;
+            }
+
+            div.gallery:hover {
+                border: 1px solid #777;
+            }
+
+            div.gallery img {
+                width: 100%;
+                height: auto;
+            }
+
+            div.desc {
+                padding: 15px;
+                text-align: center;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            .responsive {
+                padding: 0 6px;
+                float: left;
+                width: 24.99999%;
+                margin-bottom:30px;
+            }
+
+            @media only screen and (max-width: 700px){
+                .responsive {
+                    width: 49.99999%;
+                    margin: 6px 0;
+                }
+            }
+
+            @media only screen and (max-width: 500px){
+                .responsive {
+                    width: 100%;
+                }
+            }
+
+            .clearfix:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+        </style>
+        <link href="css/navbar-fixed-top.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Chelsea+Market|Nixie+One" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container" id="font-header">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand"><img src="img/dhl.jpg" width="120px"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="index.html">MARKET OVERVIEW</a></li>
+                <li><a href="brand.html">BRAND CO-MENTIONS</a></li>
+                <li><a href="buzz.html">SENTIMENTS</a></li>
+                <li class="active"><a href="wordcloud.html">WORD CLOUD</a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div>
+        </nav>
+
+        <!-- Begin page content -->
+        <div class="container">
+            <!-- Main component for a primary marketing message or call to action -->
+           <div class="tab">
+               <button class="tablinks" onclick="openCity(event, 'sourcesWC')" id="defaultOpen">Websources</button>
+               <button class="tablinks" onclick="openCity(event, 'twitterWC')">Twitter</button>
+               <button class="tablinks" onclick="openCity(event, 'fbWC')">Facebook</button>
+            </div>
+
+            <div id="sourcesWC" class="tabcontent">
+                <h3>Frequent Terms with Respective Sources</h3>
+                <table>
+                    <tr>
+                        <td>
+                            <div class="responsive">
+                              <div class="gallery">
+                                <a target="_blank" href="img/sourceElle.png">
+                                    <img src="img/sourceElle.png" name="wordcloud" style='width: 100%; object-fit: contain'/>
+                                </a>
+                                <div class="desc">ELLE</div>
+                              </div>
+                            </div>
+                            <div class="responsive">
+                                <div class="gallery">
+                                    <a target="_blank" href="img/sourceHarpersBazzar.png">
+                                        <img src="img/sourceHarpersBazzar.png" name="wordcloud" style='width: 100%; object-fit: contain'/>
+                                    </a>
+                                    <div class="desc">Harpers Bazzar</div>
+                                </div>
+                            </div>
+                            <div class="responsive">
+                                <div class="gallery">
+                                    <a target="_blank" href="img/sourceVogue.png">
+                                        <img src="img/sourceVogue.png" name="wordcloud" style='width: 100%; object-fit: contain'/>
+                                    </a>
+                                    <div class="desc">Vogue</div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="twitterWC" class="tabcontent">
+                <h3>Frequent Terms used in Twitter</h3>
+                <table>
+                    <tr>
+                        <td>
+                            <div class="responsive">
+                              <div class="gallery">
+                                <a target="_blank" href="img/twitterWC.png">
+                                    <img src="img/twitterWC.png" name="wordcloud" style="width: 100%; object-fit: contain'"/>
+                                </a>
+                                <div class="desc">Data from twitter</div>
+                              </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="fbWC" class="tabcontent">
+                <h3>Frequent Terms used in Facebook</h3>
+                <table>
+                    <tr>
+                        <td>
+                            <div class="responsive">
+                              <div class="gallery">
+                                <a target="_blank" href="img/fbPost.png">
+                                    <img src="img/fbPost.png" name="wordcloud" style='width: 100%; object-fit: contain'/>
+                                </a>
+                                <div class="desc">By Posts</div>
+                              </div>
+                            </div>
+                            <div class="responsive">
+                              <div class="gallery">
+                                <a target="_blank" href="img/fbComment.png">
+                                    <img src="img/fbComment.png" name="wordcloud" style='width: 100%; object-fit: contain'/>
+                                </a>
+                                <div class="desc">By Comments</div>
+                              </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/tab.js"></script>
+    </body>
+
+</html>
